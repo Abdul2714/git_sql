@@ -1,0 +1,28 @@
+#createing table
+create table students(
+    id int primary key auto_increment,
+    name varchar(50) not null,
+    email varchar(50) unique,
+    age int check(age>=18),
+    city varchar(50) default 'hyderabad'
+    );
+
+#inserting values
+insert into students(id,name,email,age) 
+values(3001,'raju','raju@email.com',18);
+
+insert into students(name,email,age) values('rani','rani@email.com',20),
+                                           ('bantu','bantu@email.com',21),
+                                           ('bobby','bobby@email.com',23),
+                                           ('bujji','bujji@email.com',22);
+
+#output:
++------+-------+-----------------+-----+-----------+
+| id   | name  | email           | age | city      |
++------+-------+-----------------+-----+-----------+
+| 3001 | raju  | raju@email.com  |  18 | hyderabad |
+| 3002 | rani  | rani@email.com  |  20 | hyderabad |
+| 3003 | bantu | bantu@email.com |  21 | hyderabad |
+| 3004 | bobby | bobby@email.com |  23 | hyderabad |
+| 3005 | bujji | bujji@email.com |  22 | hyderabad |
++------+-------+-----------------+-----+-----------+
